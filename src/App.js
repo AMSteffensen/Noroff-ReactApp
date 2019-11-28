@@ -16,7 +16,7 @@ function App() {
     lastName: 'Steffensen'
   };
 
-  const element = <h1>Hello, {formatName(user)}</h1>;
+  //const element = <h1>Hello, {formatName(user)}</h1>;
 
   return (
     <div className='App'>
