@@ -4,6 +4,7 @@ import Subheading from './components/layout/Subheading';
 import Paragrah from './components/layout/Paragrah';
 import Button from './components/layout/Button';
 import Layout from './components/layout/Layout';
+import HomePage from './pages/HomePage';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className='App'>
       <Layout />
+      <HomePage />
       {/* <Subheading title='This is a subheading' />
       <Paragrah title='This is a paragraph' />
       <Button title='This a button' />
