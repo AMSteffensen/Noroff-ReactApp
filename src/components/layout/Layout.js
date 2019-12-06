@@ -11,6 +11,7 @@ import About from '../about/About';
 import Contact from '../contact/Contact';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import CharacterDetailContainer from "../characters/detail/CharacterDetailContainer";
 
 function Layout() {
   return (
@@ -38,6 +39,9 @@ function Layout() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
+              <Route path="/" exact component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/character/:id" component={CharacterDetailContainer} />
         </Switch>
       </Container>
     </Router>

@@ -29,7 +29,7 @@ export default function CharacterList() {
         const {id, name, image} = character;
 
         return (
-          <Col sm={6} md={3} key={id}>
+          <Col sm={6} md={4} key={id}>
             <CharacterItem id={id} name={name} image={image} />{' '}
           </Col>
         );
