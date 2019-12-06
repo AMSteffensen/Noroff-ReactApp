@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import Spinner from 'react-bootstrap/Spinner';
 import {BASE_URL} from '../../../constants/API';
 import './CharacterDetail.css';
+import CharacterDetail from './CharacterDetail';
 
-export default class CharacterDetail extends Component {
+export default class CharacterDetailContainer extends Component {
   static propTypes = {
     match: PropTypes.object.isRequired
   };
@@ -40,6 +41,6 @@ export default class CharacterDetail extends Component {
       return <Spinner animation='border' className='spinner' />;
     }
 
-    return <div> {details.name} </div>;
+    return <CharacterDetail details={details} />;
   }
 }

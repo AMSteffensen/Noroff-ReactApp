@@ -22,7 +22,6 @@ function App() {
   return (
     <div className='App'>
       <Layout />
-      <HomePage />
       {/* <Subheading title='This is a subheading' />
       <Paragrah title='This is a paragraph' />
       <Button title='This a button' />
