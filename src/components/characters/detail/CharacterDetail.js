@@ -7,7 +7,16 @@ import DetailList from './DetailList';
 import './CharacterDetail.css';
 
 export default function CharacterDetail({details}) {
-  const {name, image, gender, species, status, episode, location} = details;
+  const {
+    name,
+    image,
+    gender,
+    origin,
+    species,
+    status,
+    episode,
+    location
+  } = details;
 
   return (
     <Row>
@@ -22,6 +31,7 @@ export default function CharacterDetail({details}) {
           status={status}
           episodes={episode}
           location={location}
+          origin={origin}
         />
       </Col>
     </Row>

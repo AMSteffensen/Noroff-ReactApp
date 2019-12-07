@@ -7,10 +7,11 @@ export default function DetailList({
   species,
   status,
   episodes,
-  location
+  location,
+  origin
 }) {
   const numberOfEpisodes = episodes.length;
-
+  const {name: originPlace} = origin;
   const {name: locationName} = location;
 
   return (
@@ -29,6 +30,9 @@ export default function DetailList({
       </ListGroup.Item>
       <ListGroup.Item>
         <b>Location</b>: {locationName}
+      </ListGroup.Item>
+      <ListGroup.Item>
+        <b>Origin</b>: {originPlace}
       </ListGroup.Item>
     </ListGroup>
   );
