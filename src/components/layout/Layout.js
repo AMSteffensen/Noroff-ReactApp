@@ -39,9 +39,8 @@ function Layout() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
-              <Route path="/" exact component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/character/:id" component={CharacterDetailContainer} />
+          <Route path="/contact/" component={Contact} />
+          <Route path="/character/:id" component={CharacterDetailContainer} />
         </Switch>
       </Container>
     </Router>

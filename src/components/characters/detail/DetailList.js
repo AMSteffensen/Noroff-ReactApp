@@ -43,5 +43,6 @@ DetailList.propTypes = {
   species: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
   episodes: PropTypes.array.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  origin: PropTypes.object.isRequired
 };
