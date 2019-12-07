@@ -5,6 +5,7 @@ import './CharacterList.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CharacterItem from './CharacterItem';
+import Search from './Search';
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -18,22 +19,28 @@ export default function CharacterList() {
       .finally(() => setLoading(false));
   }, []);
 
+  const filterCards = function(e) {
+    console.log(e);
+  };
+
   if (loading) {
     return <Spinner animation='border' className='spinner' />;
   }
 
   return (
-    <Row>
-      {' '}
-      {characters.map(character => {
-        const {id, name, image} = character;
+    <>
+      <Search handleSearch={filterCards} />
+      <Row>
+        {characters.map(character => {
+          const {id, name, image} = character;
 
-        return (
-          <Col sm={6} md={4} key={id}>
-            <CharacterItem id={id} name={name} image={image} />{' '}
-          </Col>
-        );
-      })}{' '}
-    </Row>
+          return (
+            <Col sm={6} md={3} key={id}>
+              <CharacterItem id={id} name={name} image={image} />
+            </Col>
+          );
+        })}
+      </Row>
+    </>
   );
 }
