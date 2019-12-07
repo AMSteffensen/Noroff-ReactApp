@@ -4,6 +4,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import {BASE_URL} from '../../../constants/API';
 import './CharacterDetail.css';
 import CharacterDetail from './CharacterDetail';
+import ErrorAlert from '../../error/ErrorAlert';
 
 export default class CharacterDetailContainer extends Component {
   static propTypes = {
@@ -29,6 +30,7 @@ export default class CharacterDetailContainer extends Component {
       });
     } catch (error) {
       this.setState({
+        details: error,
         loading: false
       });
     }
@@ -39,6 +41,10 @@ export default class CharacterDetailContainer extends Component {
 
     if (loading || !details) {
       return <Spinner animation='border' className='spinner' />;
+    }
+
+    if (details.error) {
+      return <ErrorAlert message={details.error} />;
     }
 
     return <CharacterDetail details={details} />;
