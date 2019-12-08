@@ -12,11 +12,12 @@ import Contact from '../contact/Contact';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import CharacterDetailContainer from "../characters/detail/CharacterDetailContainer";
+import "./layout.css";
 
 function Layout() {
   return (
     <Router>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar bg='gray' variant='dark' expand='lg'>
         <NavLink to='/' exact>
           <Navbar.Brand>Rick and Morty</Navbar.Brand>
         </NavLink>

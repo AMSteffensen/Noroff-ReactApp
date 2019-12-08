@@ -22,10 +22,9 @@ export default function CharacterDetail({details}) {
   return (
     <>
       <BreadcrumbComponent name={name} />
-      )(
       <Row>
         <Col md={6} className='detail-image'>
-          <Image src={image} roundedCircle />
+          <Image src={image} />
         </Col>
         <Col>
           <h1>{name}</h1>

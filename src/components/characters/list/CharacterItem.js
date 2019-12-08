@@ -12,7 +12,6 @@ function CharacterItem({id, name, image, history}) {
       <Card.Body>
         <Card.Title> {name} </Card.Title>
         <Button
-          variant='secondary'
           block
           onClick={() => history.push(`/character/${id}`)}
         >
