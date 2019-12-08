@@ -4,7 +4,7 @@ import Alert from 'react-bootstrap/Alert';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function ErrorAlert({message}) {
+export default function ErrorAlert({message}) {
   return (
     <Row>
       <Col>
@@ -20,5 +20,3 @@ function ErrorAlert({message}) {
 ErrorAlert.propTypes = {
   message: PropTypes.string.isRequired
 };
-
-export default ErrorAlert;

@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import DetailList from './DetailList';
 import './CharacterDetail.css';
+import BreadcrumbComponent from '../../breadcrumb/BreadCrumb';
 
 export default function CharacterDetail({details}) {
   const {
@@ -19,22 +20,26 @@ export default function CharacterDetail({details}) {
   } = details;
 
   return (
-    <Row>
-      <Col md={6} className='detail-image'>
-        <Image src={image} roundedCircle />
-      </Col>
-      <Col>
-        <h1>{name}</h1>
-        <DetailList
-          gender={gender}
-          species={species}
-          status={status}
-          episodes={episode}
-          location={location}
-          origin={origin}
-        />
-      </Col>
-    </Row>
+    <>
+      <BreadcrumbComponent name={name} />
+      )(
+      <Row>
+        <Col md={6} className='detail-image'>
+          <Image src={image} roundedCircle />
+        </Col>
+        <Col>
+          <h1>{name}</h1>
+          <DetailList
+            gender={gender}
+            species={species}
+            status={status}
+            episodes={episode}
+            location={location}
+            origin={origin}
+          />
+        </Col>
+      </Row>
+    </>
   );
 }
 
