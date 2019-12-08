@@ -6,5 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `git clone https://github.com/AMSteffensen/Noroff-ReactApp/` ###
 From project root run
 ### `yarn add`
-To start project
+To start development server
+### `yarn start`
 
