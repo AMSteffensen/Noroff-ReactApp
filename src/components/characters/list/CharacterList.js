@@ -10,6 +10,7 @@ import Search from './Search';
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,10 +25,19 @@ export default function CharacterList() {
       .finally(() => setLoading(false));
   }, []);
 
+  const clearInputValue = () => {
+    setInputValue('');
+    setFilteredCharacters(characters);
+  };
+
   const filterCards = function(e) {
     // Let's get the value the user typed in and make it lower case:
     const searchValue = e.target.value.toLowerCase();
 
+    setInputValue(e.target.value);
+    if (!searchValue) {
+      setInputValue('');
+    }
     // create a new array from the characters array
     const filteredArray = characters.filter(function(char) {
       // make each name lowercase so we can check it properly with the search value

@@ -8,17 +8,17 @@ import './CharacterList.css';
 function CharacterItem({id, name, image, history}) {
   return (
     <Card>
-      <Card.Img variant='top' src={image} />{' '}
+      <Card.Img variant='top' src={image} />
       <Card.Body>
-        <Card.Title> {name} </Card.Title>{' '}
+        <Card.Title> {name} </Card.Title>
         <Button
           variant='secondary'
           block
           onClick={() => history.push(`/character/${id}`)}
         >
-          View{' '}
-        </Button>{' '}
-      </Card.Body>{' '}
+          View
+        </Button>
+      </Card.Body>
     </Card>
   );
 }
